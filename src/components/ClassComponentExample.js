@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import Button from "./Button";
-import swal from 'sweetalert';
 
 class ClassComponentExample extends Component {
 
@@ -18,16 +16,6 @@ class ClassComponentExample extends Component {
 
     componentDidMount() {
         this.fetchUsers();
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        // console.log('prev props', prevProps)
-        // console.log('prev state', prevState)
-        // if (prevProps.userError === true) {
-        //     swal ( "Users successfully saved" ,  "Something went wrong!" ,  "success" )
-        // } else {
-        //     swal ( "Error on getting the users" ,  "Something went wrong!" ,  "error" )
-        // }
     }
 
     setEditing = () => {
@@ -54,7 +42,7 @@ class ClassComponentExample extends Component {
     }
 
     render() {
-        let { isEditing, isLoaded, users } = this.state;
+        let { isEditing } = this.state;
 
         let editingText = '';
 
@@ -73,7 +61,6 @@ class ClassComponentExample extends Component {
                     Button name
                 </Button>
 
-                {/*<Button klasat={'btn btn-primary'} name={'Button name'} handleClick={'hello' } />*/}
             </div>
         );
     }
