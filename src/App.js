@@ -1,25 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import ClassComponentExample from "./components/ClassComponentExample";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const buttons = [
+        {
+            name: 'Button 1', klasa: 'button-1'
+        },
+        {
+            name: 'Button 2', klasa: 'button-2'
+        },
+        {
+            name: 'Button 3', klasa: 'button-3'
+        },{
+            name: 'Button 1', klasa: 'button-1'
+        },
+    ];
+
+    const result = buttons.map( (item, index) => {
+        return (
+            <>
+                <Button key={index} klasat={item.klasa} name={item.name} />
+            </>
+            )
+    });
+
+    return (
+        <div className="App">
+            <header >
+                {/*{result}*/}
+
+                <ClassComponentExample />
+            </header>
+        </div>
+    );
 }
 
 export default App;
