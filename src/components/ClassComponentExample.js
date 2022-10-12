@@ -8,7 +8,7 @@ class ClassComponentExample extends Component {
         isEditing: true,
         users: null,
         isLoaded: false,
-        userError: false,
+        userError: false
     }
 
     componentWillMount() {
