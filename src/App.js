@@ -1,8 +1,14 @@
 import './App.css';
 import Button from './components/Button';
-import ClassComponentExample from "./components/ClassComponentExample";
 import Person1 from "./components/Person1";
 import Person2 from "./components/Person2";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Layout from "./components/Layout";
+import Header from "./components/Header";
 
 
 function App() {
@@ -32,15 +38,18 @@ function App() {
 
 
     return (
-        <div className="App">
-            <header >
-                {/*{result}*/}
+        <div className="container">
 
-                <ClassComponentExample />
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path="/" exact element={<Layout />} />
+                    <Route path="/person1" element={<Person1 />} />
+                    <Route path="/person2" element={<Person2 />} />
+                </Routes>
+            </BrowserRouter>,
 
-                <Person1 />
-                <Person2 />
-            </header>
+
         </div>
     );
 }

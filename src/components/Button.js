@@ -6,10 +6,9 @@ function Button(props) {
 
     const { klasat, handleClick, age } = props;
 
-    console.log('klasat', typeof props)
     return (
         <ButtonWrapper>
-            <button type={'button'} className={klasat} onClick={handleClick}>
+            <button type={'button'} className={'btn btn-primary ' + klasat} onClick={handleClick}>
                 {props.children}
             </button>
         </ButtonWrapper>
@@ -30,8 +29,7 @@ Button.propTypes = {
 
 const ButtonWrapper = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
 `;
 
 export default Button;
