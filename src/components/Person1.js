@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import UpdatedComponent from "./hoc/UpdatedComponent";
 import Button from "./Button";
+import Header from "./Header";
 
 function Person1({money, handleIncrease}) {
 
