@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function Button(props) {
 
 
-    const { klasat, name, handleClick, age } = props;
+    const { klasat, handleClick, age } = props;
 
     console.log('klasat', typeof props)
     return (
@@ -18,7 +18,6 @@ function Button(props) {
 }
 
 Button.propTypes = {
-    name: PropTypes.string.isRequired,
     handleClick: PropTypes.func,
     klasat: PropTypes.oneOf([
         'btn', 'btn-primary', 'button-1', 'button-2', 'button-3', 'btn btn-primary'
