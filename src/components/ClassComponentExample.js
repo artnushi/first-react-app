@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from "./Button";
+import withAuthorization from "./hoc/withAuthorization";
 
 class ClassComponentExample extends Component {
 
@@ -68,4 +69,4 @@ class ClassComponentExample extends Component {
 
 ClassComponentExample.propTypes = {};
 
-export default ClassComponentExample;
+export default withAuthorization(ClassComponentExample) ;

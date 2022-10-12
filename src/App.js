@@ -1,6 +1,8 @@
 import './App.css';
 import Button from './components/Button';
 import ClassComponentExample from "./components/ClassComponentExample";
+import Person1 from "./components/Person1";
+import Person2 from "./components/Person2";
 
 
 function App() {
@@ -27,12 +29,17 @@ function App() {
             )
     });
 
+
+
     return (
         <div className="App">
             <header >
                 {/*{result}*/}
 
                 <ClassComponentExample />
+
+                <Person1 />
+                <Person2 />
             </header>
         </div>
     );
