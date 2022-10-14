@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ClassComponentExample from "./ClassComponentExample";
-import Person1 from "./Person1";
-import Person2 from "./Person2";
+import Person1 from "./pages/Person1";
+import Person2 from "./pages/Person2";
 import {Link} from "react-router-dom";
 import Header from "./Header";
 
@@ -14,7 +14,6 @@ class Layout extends Component {
 
                 <Person1 />
                 <Person2 />
-
             </div>
         );
     }
