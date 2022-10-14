@@ -18,9 +18,9 @@ function Button(props) {
 
 Button.propTypes = {
     handleClick: PropTypes.func,
-    klasat: PropTypes.oneOf([
-        'btn', 'btn-primary', 'button-1', 'button-2', 'button-3', 'btn btn-primary'
-    ]),
+    // klasat: PropTypes.oneOf([
+    //     'btn', 'btn-primary', 'btn-danger', 'btn-success', 'btn-warning', 'button-1', 'button-2', 'button-3', 'btn btn-primary'
+    // ]),
     age: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
