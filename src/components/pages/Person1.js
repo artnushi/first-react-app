@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import UpdatedComponent from "../hoc/UpdatedComponent";
 import Button from "../Button";
 import Header from "../Header";
-import {UserContext} from "../hooks-class/UseContext";
 
 function Person1({money, handleIncrease}) {
 
@@ -15,16 +14,6 @@ function Person1({money, handleIncrease}) {
                     Increase
                 </Button>
             </div>
-
-            <UserContext.Consumer>
-                {
-                    value => {
-                        return (
-                            <div>Hi, I am {value.firstName} {value.lastName}</div>
-                        )
-                    }
-                }
-            </UserContext.Consumer>
         </>
     );
 }

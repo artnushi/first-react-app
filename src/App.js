@@ -14,6 +14,8 @@ import CounterClass from "./components/hooks-class/CounterClass";
 import CounterHook from "./components/hooks-class/CounterHook";
 import UseEffectHook from "./components/hooks-class/UseEffectHook";
 import UseContext from "./components/hooks/UseContext";
+import ClassComponentExample from "./components/ClassComponentExample";
+import UseEffect from "./components/hooks/UseEffect";
 
 
 function App() {
@@ -55,7 +57,7 @@ function App() {
                     <Route path="/person1" element={<Person1 />} />
                     <Route path="/person2" element={<Person2 />} />
                     <Route path="/hooks" element={<Hooks />} />
-                    <Route path="/classwork" element={<UseContext />} />
+                    <Route path="/classwork" element={<UseEffect />} />
                 </Routes>
             </BrowserRouter>
 
