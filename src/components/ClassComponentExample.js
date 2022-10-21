@@ -11,12 +11,20 @@ class ClassComponentExample extends Component {
         userError: false
     }
 
-    componentWillMount() {
-        console.log()
+    componentWillUnmount() {
+        console.log('unmounted')
+    }
+
+    componentDidUpdate(prevState, nextState) {
+        console.log('did update', nextState)
+        if (nextState.isEditing) {
+            alert('hello')
+        }
     }
 
     componentDidMount() {
-        this.fetchUsers();
+        console.log('did mount')
+        // this.fetchUsers();
     }
 
     setEditing = () => {
@@ -43,6 +51,7 @@ class ClassComponentExample extends Component {
     }
 
     render() {
+        console.log('rendered')
         let { isEditing } = this.state;
 
         let editingText = '';
